@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to WriteGenie</h1>
+    <p>Enter some text below to receive alternative suggestions:</p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="post">
+        {{ form.csrf_token }}
+        {{ form.text.label }}
+        {{ form.text }}
+        {{ form.submit }}
+    </form>
+{% endblock %}
