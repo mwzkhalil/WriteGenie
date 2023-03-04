@@ -1,4 +1,4 @@
-- app/
+- WriteGenie/
   - __init__.py
   - views.py
   - forms.py
