@@ -8,3 +8,5 @@
     - results.html
   - static/
     - style.css
+  - requirements.txt
+  - Procfile
